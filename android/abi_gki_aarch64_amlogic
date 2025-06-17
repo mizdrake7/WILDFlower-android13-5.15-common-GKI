@@ -735,6 +735,7 @@
   drm_kms_helper_poll_enable
   drm_kms_helper_poll_fini
   drm_kms_helper_poll_init
+  drm_match_cea_mode
   drmm_mode_config_init
   drm_mode_config_cleanup
   drm_mode_config_reset
@@ -1229,6 +1230,7 @@
   __kfifo_out_r
   __kfifo_to_user
   kfree
+  kfree_const
   kfree_link
   kfree_sensitive
   kfree_skb_list
@@ -2184,6 +2186,7 @@
   snd_soc_dai_set_tdm_slot
   snd_soc_dapm_get_enum_double
   snd_soc_dapm_put_enum_double
+  snd_soc_get_dai_name
   snd_soc_get_volsw
   snd_soc_get_volsw_range
   snd_soc_info_enum_double
@@ -2198,6 +2201,7 @@
   snd_soc_of_parse_audio_simple_widgets
   snd_soc_of_parse_card_name
   snd_soc_of_parse_tdm_slot
+  snd_soc_of_put_dai_link_codecs
   snd_soc_pm_ops
   snd_soc_put_volsw
   snd_soc_put_volsw_range
@@ -2211,7 +2215,11 @@
   snd_timer_start
   snd_timer_stop
   snprintf
+  soc_device_register
   __sock_create
+  sock_kfree_s
+  sock_kmalloc
+  sock_kzfree_s
   sock_release
   sock_wfree
   sort
@@ -2219,6 +2227,7 @@
   __spi_alloc_controller
   spi_alloc_device
   spi_busnum_to_master
+  spi_bus_type
   spi_controller_resume
   spi_controller_suspend
   spi_finalize_current_message

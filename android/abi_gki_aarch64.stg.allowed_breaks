@@ -1,0 +1,9 @@
+# How to use this file: http://go/approve-abi-break
+# ABI freeze commit: 666cbbfe5c567ca79da30dccad8b5257ca88f02c
+
+type 'struct scm_fp_list' changed
+  byte size changed from 2064 to 2072
+  member 'struct unix_edge* edges' was added
+  member 'short count_unix' changed
+    offset changed by 64
+

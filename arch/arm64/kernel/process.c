@@ -585,15 +585,12 @@ static bool get_wchan_cb(void *arg, unsigned long pc)
 	return wchan_info->count++ < 16;
 }
 
-unsigned long get_wchan(struct task_struct *p)
+unsigned long __get_wchan(struct task_struct *p)
 {
 	struct wchan_info wchan_info = {
 		.pc = 0,
 		.count = 0,
 	};
-
-	if (!p || p == current || task_is_running(p))
-		return 0;
 
 	if (!try_get_task_stack(p))
 		return 0;
@@ -604,7 +601,6 @@ unsigned long get_wchan(struct task_struct *p)
 
 	return wchan_info.pc;
 }
-EXPORT_SYMBOL_GPL(get_wchan);
 
 unsigned long arch_align_stack(unsigned long sp)
 {
